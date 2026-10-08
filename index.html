@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MedPrompt: Dynamic Semantic Aware Prompt Encoding for Medical Image Segmentation with MedSAM-2.">
+  <title>MedPrompt — Dynamic Semantic Aware Prompt Encoding</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header id="project" class="project-header">
+      <h1>MedPrompt</h1>
+      <p class="paper-title">Dynamic Semantic Aware Prompt Encoding for Medical Image Segmentation with MedSAM-2</p>
+      <p class="project-description">MedPrompt is an interactive medical image segmentation demo built on MedSAM-2. Its Dynamic Semantic Aware Prompt Encoding (DSPE) combines local image context with learned foreground prototypes to improve segmentation accuracy and reduce sensitivity to click placement. The interface allows users to select a target with a point prompt and inspect the predicted segmentation for research and annotation exploration.</p>
+      <p id="author" class="author">Jiaxi Hu</p>
+      <div id="resources" class="resources" aria-label="Project resources">
+        <span data-resource="demo" title="链接待配置"><button class="resource-button" disabled>Demo</button></span>
+        <span data-resource="video"><a class="resource-button" href="#demo-video">Video</a></span>
+      </div>
+    </header>
+
+    <section id="showcase" class="showcase" aria-label="Point-prompt segmentation examples">
+      <figure>
+        <img src="assets/gifs/acdc_lv.gif" width="512" height="512" alt="ACDC left ventricle: three independent positive point prompts and their real predicted segmentation masks.">
+        <figcaption>Left Ventricle (LV) / 左心室</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gifs/acdc_myo.gif" width="512" height="512" alt="ACDC myocardium: three independent positive point prompts in the myocardial ring and their real predicted masks.">
+        <figcaption>Myocardium (MYO) / 心肌</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gifs/isic_lesion_1036.gif" width="1036" height="1036" alt="ISIC2016 skin lesion: three independent positive point prompts and real predictions from the specified checkpoint with identity FiLM.">
+        <figcaption>Skin Lesion / 皮肤病灶</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/gifs/refuge_cup.gif" width="512" height="512" alt="REFUGE optic cup: three independent positive point prompts and real DSPE predictions from the fold_0 checkpoint.">
+        <figcaption>Optic Cup / 视杯</figcaption>
+      </figure>
+    </section>
+
+    <section id="abstract" class="text-section" aria-labelledby="abstract-title">
+      <div class="section-heading">
+        <h2 id="abstract-title">Abstract</h2>
+        <div class="language-control" role="group" aria-label="Abstract language">
+          <button type="button" data-language="en" aria-pressed="true" aria-controls="abstract-en">English</button>
+          <button type="button" data-language="zh" aria-pressed="false" aria-controls="abstract-zh">中文</button>
+        </div>
+      </div>
+      <div id="abstract-en" class="prose" lang="en" data-language-panel="en">
+        <p>Medical SAM 2 (MedSAM-2) supports medical image segmentation using point prompts, yet its initial point encoding does not incorporate the image context surrounding each click. We propose Dynamic Semantic Aware Prompt Encoding (DSPE) to enrich geometric point representations with local visual context and learned anatomical references. DSPE introduces an Anisotropic Context Encoding Module (ACEM), which aggregates horizontal and vertical features around each click and combines them with local image features to construct a query representing the surrounding context. Learnable anatomical prototypes are initialized from foreground features of the training data and optimized during segmentation training to provide semantic references for the segmentation target. The query guides prototype matching, while gated residual fusion integrates the matched references with the local representation. The resulting features calibrate the original point embedding before mask decoding, preserving geometric guidance while incorporating visual information from the image. Experiments on REFUGE, ISIC2018, and ACDC demonstrate improved segmentation accuracy over MedSAM-2, while evaluations with perturbed point prompts show reduced sensitivity to click placement.</p>
+      </div>
+      <div id="abstract-zh" class="prose" lang="zh-CN" data-language-panel="zh" hidden>
+        <p>Medical SAM 2（MedSAM-2）支持通过点提示进行医学图像分割，但其初始点编码未融合每次点击周围的图像上下文。我们提出动态语义感知提示编码（DSPE），利用局部视觉上下文和学习得到的解剖结构参考信息，增强几何点表示。DSPE 引入各向异性上下文编码模块（ACEM），聚合每次点击周围的横向和纵向特征，并将其与局部图像特征结合，构建表征周围上下文的查询。可学习的解剖原型由训练数据的前景特征初始化，并在分割训练过程中优化，为分割目标提供语义参考。查询引导原型匹配，门控残差融合将匹配到的参考信息与局部表示整合。所得特征在掩膜解码前校准原始点嵌入，在保留几何引导的同时融入图像中的视觉信息。REFUGE、ISIC2018 和 ACDC 上的实验表明，该方法相较于 MedSAM-2 提高了分割准确性；点提示扰动评估进一步显示，其对点击位置的敏感性有所降低。</p>
+      </div>
+    </section>
+
+    <section id="introduction" class="text-section introduction" aria-labelledby="introduction-title">
+      <div class="section-heading">
+        <h2 id="introduction-title">Introduction &amp; Demo</h2>
+        <div class="language-control" role="group" aria-label="Introduction language">
+          <button type="button" data-language="en" aria-pressed="true" aria-controls="introduction-en">English</button>
+          <button type="button" data-language="zh" aria-pressed="false" aria-controls="introduction-zh">中文</button>
+        </div>
+      </div>
+      <div id="introduction-en" class="prose" lang="en" data-language-panel="en">
+        <p>Point prompts provide a simple way to indicate a target in a medical image, but segmentation predictions can vary with the location of the click. MedSAM-2 initially represents each point using its position and prompt label, without explicitly incorporating the local image features surrounding that point. MedPrompt explores whether introducing this information during prompt encoding can improve segmentation quality and reduce sensitivity to click placement.</p>
+        <p>The proposed DSPE combines directional image context with learnable prototypes derived from training foreground features. Dynamic gating controls how these features contribute to the original point representation before mask decoding, while preserving the point-based interaction. The research evaluates this approach on optic cup segmentation, skin lesion segmentation, and cardiac MRI structures.</p>
+      </div>
+      <div id="introduction-zh" class="prose" lang="zh-CN" data-language-panel="zh" hidden>
+        <p>点提示让用户能够通过简单的点击指定医学图像中的目标，但分割结果可能随点击位置变化。MedSAM-2 的初始点表示使用位置和提示标签信息，未显式融合点击周围的局部图像特征。MedPrompt 探索在提示编码阶段引入这些信息，以提高分割质量并降低对点击位置的敏感性。</p>
+        <p>所提出的 DSPE 将方向性图像上下文与从训练数据前景特征中学习的原型相结合，通过动态门控控制这些特征对原始点表示的贡献，再进行掩膜解码，同时保留点提示交互方式。研究在视杯、皮肤病灶和心脏 MRI 结构分割任务上评估了这一方法。</p>
+      </div>
+      <div id="demo-video" class="demo-video" tabindex="-1" role="region" aria-label="Demo video">
+        <div id="video-placeholder" class="video-placeholder">
+          <p>Demo video coming soon</p>
+          <p lang="zh-CN">演示视频待上传</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,65 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Microsoft YaHei", sans-serif;
+  color: #3b3b3b;
+  background: #fff;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+[hidden] { display: none !important; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid #227384; outline-offset: 5px; }
+main { max-width: 1192px; margin: 0 auto; padding: 62px 32px 64px; }
+.project-header { text-align: center; }
+h1 { color: #171717; font-size: clamp(48px, 6vw, 68px); font-weight: 700; letter-spacing: -2px; margin: 0; line-height: 1.15; }
+.paper-title { max-width: 940px; margin: 20px auto 0; font-size: clamp(23px, 3vw, 31px); font-weight: 600; line-height: 1.4; color: #242424; text-wrap: balance; }
+.project-description { max-width: 830px; margin: 27px auto 0; font-size: 17px; line-height: 1.75; }
+.author { margin: 25px 0 20px; color: #252525; font-size: 19px; line-height: 1.6; }
+.resources { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+.resources > span { display: inline-flex; }
+.resource-button { display: inline-flex; justify-content: center; align-items: center; min-height: 42px; padding: 9px 22px; border: 1px solid #242424; border-radius: 22px; background: #242424; color: #fff; text-decoration: none; font-size: 15px; font-weight: 500; line-height: 1.5; }
+a.resource-button:hover { background: #444; border-color: #444; }
+.resource-button:disabled { color: #737373; background: #f3f3f3; border-color: #dedede; cursor: not-allowed; }
+.showcase { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 52px; }
+figure { min-width: 0; margin: 0; }
+figure img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; }
+figcaption { margin-top: 15px; text-align: center; font-size: 15px; font-weight: 500; line-height: 1.7; color: #363636; }
+.text-section { max-width: 820px; margin: 64px auto 0; }
+.section-heading { text-align: center; margin-bottom: 26px; }
+h2 { margin: 0; color: #222; font-size: 30px; font-weight: 600; line-height: 1.35; letter-spacing: -.5px; }
+.language-control { display: inline-flex; gap: 3px; margin-top: 16px; padding: 3px; border: 1px solid #dedede; border-radius: 7px; }
+.language-control button { min-height: 32px; padding: 5px 13px; border: 0; border-radius: 4px; background: transparent; color: #666; cursor: pointer; font-size: 13px; line-height: 1.5; }
+.language-control button[aria-pressed="true"] { background: #303030; color: #fff; }
+.language-control button[aria-pressed="false"]:hover { background: #f1f1f1; }
+.prose { text-align: left; font-size: 17px; line-height: 1.85; overflow-wrap: break-word; }
+.prose p { margin: 0; }
+.prose p + p { margin-top: 20px; }
+.prose[lang="zh-CN"] { line-height: 2; }
+.introduction { margin-top: 60px; }
+.demo-video { width: 100%; aspect-ratio: 16 / 9; margin-top: 32px; background: #f3f3f3; scroll-margin-top: 24px; }
+.video-placeholder { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 24px; text-align: center; }
+.video-placeholder p { margin: 0; font-size: 20px; line-height: 1.6; color: #777; }
+.video-placeholder p[lang="zh-CN"] { font-size: 16px; }
+.demo-video video { display: block; width: 100%; height: 100%; object-fit: contain; }
+@media (max-width: 999px) {
+  main { padding-top: 46px; }
+  .showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 24px; }
+}
+@media (max-width: 599px) {
+  main { padding: 36px 22px 40px; }
+  h1 { letter-spacing: -1.5px; }
+  .paper-title { margin-top: 18px; }
+  .project-description { font-size: 16px; margin-top: 23px; }
+  .resources { gap: 8px; }
+  .resource-button { padding: 9px 16px; font-size: 14px; }
+  .showcase { grid-template-columns: minmax(0, 1fr); max-width: 420px; margin: 38px auto 0; gap: 30px; }
+  .text-section { margin-top: 46px; }
+  h2 { font-size: 27px; }
+  .prose { font-size: 16px; }
+  .video-placeholder p { font-size: 17px; }
+  .video-placeholder p[lang="zh-CN"] { font-size: 14px; }
+}

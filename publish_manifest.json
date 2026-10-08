@@ -1,0 +1,26 @@
+{
+  "source_homepage": "medprompt/homepage",
+  "target": "GitHub Pages static site",
+  "published": false,
+  "remote_repository": "https://github.com/h18665/MedPrompt",
+  "demo_url": null,
+  "demo_status": "not deployed; button disabled",
+  "contains_weights": false,
+  "contains_training_data_directory": false,
+  "display_license_status": "未核实",
+  "copied_asset_sha256": {
+    "index.html": "20e1a6eb0903907543c5c2b2e47e4db9db0fa44a19ba92ed4b294725c4867d52",
+    "styles.css": "b4ee760fc896aa20a48c624b36b9b8621ea15ec1557689b96645d3ef31f092ee",
+    "app.js": "459879f1af40acd4e8dcbde23b5b73bfc503622322a387a435a7cd42f1b87c93",
+    "assets/sources.json": "15b4836331a5c020b5c3f1a9a83b8833375d17b267a78502a5570fbe01928740",
+    "assets/video-sources.json": "262d8fc59e262dda292d2ebfbfb2324d546c82a76711fb980379b17dc102d43d",
+    "assets/gifs/acdc_lv.gif": "700583552956c65b48afa6110bc93d41da0c00f69dc816daa42bb29c2f5e6015",
+    "assets/gifs/acdc_myo.gif": "b356def83a77a11e0ff37c5dcd2ba57bbf54d13083fe95d32d15200249a91919",
+    "assets/gifs/isic_lesion_1036.gif": "a077b1875c4dcc59a03758fe266b9b15717e241ac46e58dd85dad81907861eea",
+    "assets/gifs/refuge_cup.gif": "5d4af7692104ccf7846143efaced2a3fa0f34267cd7acf0c8a702f3e39a83be2",
+    "assets/videos/MedPrompt_demo_full.mp4": "3fef3842f95b8204a9717ac0af9989f14327c9dc2bcade3881cf87287cac43e4",
+    "assets/videos/MedPrompt_demo_full.webm": "4247def986f38794a4bbd1eebbf34e381ec8bb3bead989c1762a19a523a9b6b6",
+    "assets/videos/MedPrompt_demo_poster.jpg": "20bb08a6eb7270c5e06f330696946cad6efaea0329daf7f04cd753c7df40bd9a"
+  },
+  "expected_pages_url": "https://h18665.github.io/MedPrompt/"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "source": "outputs/showcase_gifs/acdc_lv.gif",
+    "static_resource": "assets/gifs/acdc_lv.gif",
+    "sha256": "700583552956c65b48afa6110bc93d41da0c00f69dc816daa42bb29c2f5e6015",
+    "processing": "byte-for-byte copy; no crop, resize or re-encoding"
+  },
+  {
+    "source": "outputs/showcase_gifs/acdc_myo.gif",
+    "static_resource": "assets/gifs/acdc_myo.gif",
+    "sha256": "b356def83a77a11e0ff37c5dcd2ba57bbf54d13083fe95d32d15200249a91919",
+    "processing": "byte-for-byte copy; no crop, resize or re-encoding"
+  },
+  {
+    "source": "outputs/showcase_gifs/isic_lesion_1036.gif",
+    "static_resource": "assets/gifs/isic_lesion_1036.gif",
+    "sha256": "a077b1875c4dcc59a03758fe266b9b15717e241ac46e58dd85dad81907861eea",
+    "processing": "byte-for-byte copy; no crop, resize or re-encoding"
+  },
+  {
+    "source": "outputs/showcase_gifs/refuge_cup.gif",
+    "static_resource": "assets/gifs/refuge_cup.gif",
+    "sha256": "5d4af7692104ccf7846143efaced2a3fa0f34267cd7acf0c8a702f3e39a83be2",
+    "processing": "byte-for-byte copy; no crop, resize or re-encoding"
+  }
+]
