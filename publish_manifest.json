@@ -1,7 +1,7 @@
 {
   "source_homepage": "medprompt/homepage",
   "target": "GitHub Pages static site",
-  "published": false,
+  "published": true,
   "remote_repository": "https://github.com/h18665/MedPrompt",
   "demo_url": null,
   "demo_status": "not deployed; button disabled",
@@ -22,5 +22,7 @@
     "assets/videos/MedPrompt_demo_full.webm": "4247def986f38794a4bbd1eebbf34e381ec8bb3bead989c1762a19a523a9b6b6",
     "assets/videos/MedPrompt_demo_poster.jpg": "20bb08a6eb7270c5e06f330696946cad6efaea0329daf7f04cd753c7df40bd9a"
   },
-  "expected_pages_url": "https://h18665.github.io/MedPrompt/"
+  "expected_pages_url": "https://h18665.github.io/MedPrompt/",
+  "pages_url": "https://h18665.github.io/MedPrompt/",
+  "published_at_utc": "2026-10-08T11:28:41.933698+00:00"
 }

@@ -6,7 +6,7 @@ Dynamic Semantic Aware Prompt Encoding for Medical Image Segmentation with MedSA
 
 展示仓库：https://github.com/h18665/MedPrompt
 
-部署后的预期主页：https://h18665.github.io/MedPrompt/ （在 Pages 成功部署前尚未上线）。
+项目主页：https://h18665.github.io/MedPrompt/ （已部署 GitHub Pages）。
 
 这是 MedPrompt 学术介绍页，包含真实点提示分割 GIF、81 秒中文演示视频、英文/中文 Abstract 与 Introduction。界面参考 ScribblePrompt 的简洁学术排版，素材来自本项目实际预测。
 
