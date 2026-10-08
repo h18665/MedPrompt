@@ -23,12 +23,12 @@ Dynamic Semantic Aware Prompt Encoding for Medical Image Segmentation with MedSA
 
 - index.html：项目介绍、作者、GIF 标签、双语摘要与 Introduction。
 - styles.css：排版。
-- config.json：视频、封面和未来长期在线 Demo 的地址。
+- config.json：视频、封面和受保护的在线 Demo 地址。
 - assets/gifs/ 与 assets/videos/：已复制的真实素材；不需要学校服务器提供这些文件。
 
-Paper 和 Code & Data 按要求暂时移除。未配置长期推理服务时，Demo 保持禁用；Video 按钮可观看真实操作视频。以后把真正长期在线的 HTTPS 推理服务地址填入 demo_public 即可。
+Paper 和 Code & Data 按要求暂时移除。Demo 已连接固定 HTTPS 入口：https://spoof-retrieval-tipper.ngrok-free.dev/ 。访客账号为 medprompt，密码由项目所有者私下提供，不在本仓库保存。ngrok 免费版首次访问需点击 Visit Site 后进入登录页；固定域名不按一周到期，但学校服务器、独立演示服务和网关须持续运行，并受免费账户使用额度限制。Video 按钮可直接观看操作视频，无需登录。
 
-GitHub Pages 只提供 HTML/CSS/JavaScript 等静态内容，不运行 PyTorch、CUDA 或模型权重。这个主页仓库仅包含介绍与素材，不冒充完整科研代码仓库。
+GitHub Pages 只提供 HTML/CSS/JavaScript 等静态内容，不运行 PyTorch、CUDA 或模型权重。这个主页仓库仅包含介绍与素材，不冒充完整科研代码仓库。实时模型运行在学校服务器上，由非 root 演示账户提供；网页/API/上传/下载均要求访客认证，仅提供指定展示图像和当前预测输出，科研权重、系统目录及访问凭据不能通过 Demo 下载。
 
 ## 来源、协议与限制
 

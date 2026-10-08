@@ -3,8 +3,8 @@
   "target": "GitHub Pages static site",
   "published": true,
   "remote_repository": "https://github.com/h18665/MedPrompt",
-  "demo_url": null,
-  "demo_status": "not deployed; button disabled",
+  "demo_url": "https://spoof-retrieval-tipper.ngrok-free.dev/",
+  "demo_status": "authenticated real inference on private GPU server via assigned ngrok dev domain",
   "contains_weights": false,
   "contains_training_data_directory": false,
   "display_license_status": "未核实",
@@ -24,5 +24,11 @@
   },
   "expected_pages_url": "https://h18665.github.io/MedPrompt/",
   "pages_url": "https://h18665.github.io/MedPrompt/",
-  "published_at_utc": "2026-10-08T11:28:41.933698+00:00"
+  "published_at_utc": "2026-10-08T11:28:41.933698+00:00",
+  "demo_requires_login": true,
+  "demo_transport": "HTTPS",
+  "demo_service_is_root": false,
+  "demo_gateway_is_root": false,
+  "demo_weights_uploaded": false,
+  "demo_verified_at_utc": "2026-10-08T12:35:12.643736+00:00"
 }
